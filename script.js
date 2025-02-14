@@ -8,7 +8,7 @@ const leaderboardData = [
     { team: "TEAM SD Warriors", chickens: 0, kills: 0, points: 0 },
     { team: "The.બાઝ", chickens: 0, kills: 0, points: 0 },
     { team: "Maqsad", chickens: 0, kills: 0, points: 0 },
-    { team: "", chickens: 0, kills: 0, points: 0 },
+    // { team: "", chickens: 0, kills: 0, points: 0 },
   ];
   
   const leaderboard = document.getElementById("leaderboard");
