@@ -21,6 +21,8 @@ const leaderboardData = [
   { team: "X-Factor Elite", chickens: 0, kills: 0,place: 0, points: 0 },
 
   { team: "MAUT KE SAUDAGAR", chickens: 0, kills: 0,place: 0, points: 0 },
+
+  { team: "Team Chatakapataka", chickens: 0, kills: 0,place: 0, points: 0 },
   // { team: "", chickens: 0, kills: 0,place: 0, points: 0 },
 ];
 
