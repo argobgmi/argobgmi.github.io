@@ -1,31 +1,27 @@
 // script.js
 const leaderboardData = [
 
-  { team: "Team Zero", chickens: 3, kills: 94,place: 18, points: 0 }, //done
+  { team: "Team Zero", chickens: 3, kills: 99,place: 26, points: 0 }, //done
 
-  { team: "XSpark", chickens: 1, kills: 49,place: 22, points: 0 }, //done
+  { team: "XSpark", chickens: 1, kills: 54,place: 28, points: 0 }, //done
 
-  { team: "TEAM SD Warriors", chickens: 0, kills: 46, place: 32, points: 0 }, //done
+  { team: "TEAM SD Warriors", chickens: 0, kills: 49, place: 36, points: 0 }, //done
 
-  { team: "BINARY 4", chickens: 1, kills: 52,place: 0, points: 0 }, //done
+  { team: "BINARY 4", chickens: 1, kills: 55,place: 0, points: 0 }, //done
 
-  { team: "The.બાઝ", chickens: 1, kills: 40,place: 10, points: 0 }, //done
+  { team: "The.બાઝ", chickens: 1, kills: 42,place: 10, points: 0 }, //done
 
   { team: "Apsarao ke patidev", chickens: 1, kills: 32,place: 14, points: 0 }, //
   
-  
+  { team: "Team Rookie", chickens: 1, kills: 38,place: 6, points: 0 }, //done
 
-  { team: "Maqsad", chickens: 1, kills: 29,place: 12, points: 0 }, //done
+  { team: "Maqsad", chickens: 1, kills: 30,place: 12, points: 0 }, //done
 
-  { team: "Team Rookie", chickens: 1, kills: 35,place: 6, points: 0 }, //done
+  { team: "X-Factor Elite", chickens: 0, kills: 3,place: 49, points: 0 }, //done
 
-  { team: "X-Factor Elite", chickens: 0, kills: 3,place: 47, points: 0 }, //done
+  { team: "TokTok Gang", chickens: 1, kills: 20,place: 16, points: 0 }, //done
 
-  { team: "Death", chickens: 0, kills: 3,place: 26, points: 0 }, //done
-
-  
-
-  { team: "TokTok Gang", chickens: 0, kills: 13,place: 16, points: 0 }, //done
+  { team: "Death", chickens: 0, kills: 3,place: 26, points: 0 }, //
 
   { team: "Team Chatakapataka", chickens: 1, kills: 6,place: 8, points: 0 }, //
 
