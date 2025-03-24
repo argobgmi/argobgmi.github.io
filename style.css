@@ -1,137 +1,261 @@
 /* styles.css */
 body {
-    background: #000;
-    color: #fff;
-    font-family: 'Orbitron', sans-serif;
-    overflow-x: hidden;
-  }
-  
-  /* Header */
-  .header {
-    text-align: center;
-    padding: 40px 20px;
-    background: linear-gradient(to right, #ff0000, #8b0000);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
-    animation: shine 3s infinite;
-  }
-  
-  @keyframes shine {
-    0% { left: -100%; }
-    100% { left: 100%; }
-  }
-  
-  .logo img {
-    width: 100px;
-    height: auto;
-    margin-bottom: 20px;
-  }
-  
-  .title {
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    position: relative;
-    display: inline-block;
-  }
-  
-  .glitch {
-    position: relative;
-    color: #fff;
-  }
-  
-  .glitch::before, .glitch::after {
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .glitch::before {
-    left: 2px;
-    text-shadow: -2px 0 red;
-    animation: glitch-anim 2s infinite linear alternate-reverse;
-  }
-  
-  .glitch::after {
-    left: -2px;
-    text-shadow: 2px 0 blue;
-    animation: glitch-anim 1s infinite linear alternate-reverse;
-  }
-  
-  @keyframes glitch-anim {
-    0% { clip-path: inset(0 0 0 0); }
-    20% { clip-path: inset(20% 0 10% 0); }
-    40% { clip-path: inset(40% 0 30% 0); }
-    60% { clip-path: inset(60% 0 50% 0); }
-    80% { clip-path: inset(80% 0 70% 0); }
-    100% { clip-path: inset(100% 0 90% 0); }
-  }
-  
-  .subtitle {
-    font-size: 1.5rem;
-    color: #ffb0b0;
-    animation: pulse 2s infinite;
-  }
-  
-  @keyframes pulse {
-    0% { opacity: 0.8; }
-    50% { opacity: 0.4; }
-    100% { opacity: 0.8; }
-  }
-  
-  /* Leaderboard */
-  .leaderboard {
-    padding: 30px 0;
-  }
-  
-  .table {
-    background: rgba(0, 0, 0, 0.8);
-    color: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .table th, .table td {
-    border-color: #444;
-  }
-  
-  .table th {
-    background: #ff0000;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .table tbody tr {
-    transition: transform 0.3s ease, background 0.3s ease;
-  }
-  
-  .table tbody tr:hover {
-    background: rgba(255, 71, 87, 0.2);
-    transform: scale(1.009);
-  }
-  
-  /* Footer */
-  .footer {
-    text-align: center;
-    padding: 20px;
-    background: #000;
-    color: #fff;
-    border-top: 2px solid #ff0000;
-  }
-  
-  .footer p {
-    margin: 0;
-  }
+  background: #000;
+  color: #fff;
+  font-family: 'Orbitron', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(to right, #ff0000, #8b0000);
+  position: relative;
+  overflow: hidden;
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05));
+  animation: shine 3s infinite;
+}
+
+@keyframes shine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+}
+
+.glitch {
+  position: relative;
+  color: #fff;
+}
+
+.glitch::before, .glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -2px 0 red;
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: 2px 0 blue;
+  animation: glitch-anim 1s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% { clip-path: inset(0 0 0 0); }
+  20% { clip-path: inset(20% 0 10% 0); }
+  40% { clip-path: inset(40% 0 30% 0); }
+  60% { clip-path: inset(60% 0 50% 0); }
+  80% { clip-path: inset(80% 0 70% 0); }
+  100% { clip-path: inset(100% 0 90% 0); }
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #ffb0b0;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 0.4; }
+  100% { opacity: 0.8; }
+}
+
+/* Leaderboard */
+.leaderboard {
+  padding: 30px 0;
+}
+
+.table {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+
+.table th, .table td {
+  border-color: #444;
+}
+
+.table th {
+  background: #ff0000;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.table tbody tr {
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.team-row {
+  cursor: pointer;
+  position: relative;
+}
+
+.team-row:hover {
+  background: rgba(255, 71, 87, 0.2);
+  transform: scale(1.005);
+}
+
+.team-row::after {
+  content: '▼';
+  position: absolute;
+  right: 10px;
+  color: #ff4757;
+  transition: transform 0.3s ease;
+}
+
+.team-row.active::after {
+  transform: rotate(180deg);
+}
+
+.team-name {
+  font-weight: bold;
+  color: #ff4757;
+}
+
+/* Improved Player Stats with Smooth Transitions */
+/* Add this to your style.css */
+.player-stats {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.4s ease-in-out;
+  background: #ad00006a;
+  display: none; /* Initially hidden */
+  border-bottom: 1px solid #333;
+}
+
+.player-stats.expanded {
+  display: table-row;
+}
+
+.player-stats-container {
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.player-stats-title {
+  color: #ff4757;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+}
+
+.player-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.player-card {
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #ff4757;
+  border-radius: 8px;
+  padding: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+.player-name {
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+.player-kills {
+  font-size: 0.9rem;
+  color: #ff9999;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  border-top: 2px solid #ff0000;
+}
+
+.footer p {
+  margin: 0;
+}
+
+/* Button Styles */
+.btn-group .btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-group .btn:not(.active) {
+  background-color: #6b0000;
+}
+
+.btn-group .btn.active {
+  background-color: #ff0000;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+}
+
+.btn-group .btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.7s ease;
+}
+
+.btn-group .btn.active::before {
+  animation: buttonShine 2s infinite;
+}
+
+@keyframes buttonShine {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
