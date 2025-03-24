@@ -75,7 +75,7 @@ fetch('data.csv')
 
     // Update the rounds completed text
     const uniqueRounds = [...new Set(data.map(row => row.round))].length;
-    document.querySelector('.header .subtitle:last-child').textContent = `${uniqueRounds}/9 Rounds Complete`;
+    // document.querySelector('.header .subtitle:last-child').textContent = `${uniqueRounds}/9 Rounds Complete`;
 
     // Populate both leaderboards and add interactivity
     populateTeamLeaderboard();
