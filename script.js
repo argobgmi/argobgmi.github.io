@@ -172,56 +172,51 @@ function addClickListeners() {
         
         // Then after a short delay, collapse the row
         setTimeout(() => {
-          playerRow.classList.remove('expanded');
           playerRow.style.height = '0';
           
-          // Add this line to ensure the row is properly hidden after transition
+          // After transition completes, remove expanded class and hide completely
           setTimeout(() => {
-            if (!playerRow.classList.contains('expanded')) {
-              playerRow.style.display = 'none';
-            }
-          }, 400); // Match this to your CSS transition time
+            playerRow.classList.remove('expanded');
+            playerRow.style.display = 'none';
+          }, 400);
         }, 200);
         
         currentlyExpanded = null;
         return;
       }
       
-      // If there's another expanded row, close it first
+      // If there's another expanded row, close it completely before expanding new one
       if (currentlyExpanded) {
         // Find the corresponding team row and remove active class
         const prevTeamId = currentlyExpanded.id.replace('team-players-', '');
         const prevTeamRow = document.querySelector(`.team-row[data-team-id="${prevTeamId}"]`);
-        prevTeamRow.classList.remove('active');
+        if (prevTeamRow) {
+          prevTeamRow.classList.remove('active');
+        }
         
         // Hide content first
         const prevContainer = currentlyExpanded.querySelector('.player-stats-container');
         prevContainer.style.opacity = '0';
         prevContainer.style.transform = 'translateY(-20px)';
         
-        // Then collapse after delay
-        setTimeout(() => {
-          currentlyExpanded.classList.remove('expanded');
-          currentlyExpanded.style.height = '0';
-          
-          // Add this line to ensure previous row is properly hidden
-          setTimeout(() => {
-            if (!currentlyExpanded.classList.contains('expanded')) {
-              currentlyExpanded.style.display = 'none';
-            }
-          }, 400); // Match this to your CSS transition time
-        }, 200);
+        // Then completely hide the previous row
+        currentlyExpanded.style.height = '0';
+        currentlyExpanded.style.display = 'none';
+        currentlyExpanded.classList.remove('expanded');
       }
       
-      // Expand the clicked row
+      // Short delay to ensure previous content is hidden
       setTimeout(() => {
-        // Ensure the row is visible before expanding
+        // Make sure the row is visible first
         playerRow.style.display = 'table-row';
+        playerRow.classList.add('expanded');
         
-        // Set height based on content
+        // Force browser reflow to ensure display change is applied
+        void playerRow.offsetHeight;
+        
+        // Calculate content height and set it
         const contentHeight = playerRow.querySelector('.player-stats-container').offsetHeight;
         playerRow.style.height = contentHeight + 'px';
-        playerRow.classList.add('expanded');
         
         // Show the content with a slight delay
         setTimeout(() => {
@@ -235,12 +230,11 @@ function addClickListeners() {
         // Scroll to make sure the expanded section is visible
         setTimeout(() => {
           const rect = playerRow.getBoundingClientRect();
-          // If the expanded section is not fully visible, scroll to it
           if (rect.bottom > window.innerHeight) {
             playerRow.scrollIntoView({ behavior: 'smooth', block: 'center' });
           }
         }, 300);
-      }, currentlyExpanded ? 250 : 0); // Delay if closing another row
+      }, 100);
     });
   });
 }
